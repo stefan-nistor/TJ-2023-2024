@@ -1,0 +1,5 @@
+Oct 06, 2023 2:28:31 PM ro.uaic.info.hello.helloworld.HelloServlet doPost
+INFO: Method requested: POST
+Client IP: 0:0:0:0:0:0:0:1
+Client Locale: en_US
+Parameter: 6
