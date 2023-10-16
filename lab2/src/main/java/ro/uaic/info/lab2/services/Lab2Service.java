@@ -1,4 +1,10 @@
-package ro.uaic.info.lab2;
+package ro.uaic.info.lab2.services;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
+import org.graph4j.io.DimacsIO;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,25 +13,11 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.MultipartConfig;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.Part;
-import org.graph4j.io.DimacsIO;
+public class Lab2Service {
 
-@WebServlet("/upload")
-@MultipartConfig(fileSizeThreshold=1024*1024*2, // 2MB
-        maxFileSize=1024*1024*10,      // 10MB
-        maxRequestSize=1024*1024*50)   // 50MB
-public class UploadServlet extends HttpServlet {
     private static final String SAVE_DIR = "uploadFiles";
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    public void processDoPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String appPath = request.getServletContext().getRealPath("");
         String savePath = appPath + File.separator + SAVE_DIR;
 
