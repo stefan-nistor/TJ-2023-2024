@@ -9,3 +9,9 @@
   - [x] Compulsory
   - [x] Homework
   - [ ] Bonus
+
+## LAB 3
+  - [ ] Compulsory [WIP]
+    - Created entities for Project and Student, prepared ProjectService to fetch project from DB, created HelloWorld JSF
+  - [ ] Homework
+  - [ ] Bonus
