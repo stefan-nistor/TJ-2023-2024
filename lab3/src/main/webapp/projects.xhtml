@@ -8,4 +8,24 @@
 <f:view>
     <h:outputLabel value="Hello, world from JSF"/>
 </f:view>
+
+<h:dataTable value="#{projectBean.projects}" var="project">
+    <h:column>
+        <f:facet name="header">Name</f:facet>
+        #{project.name}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Category</f:facet>
+        #{project.category}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Description</f:facet>
+        #{project.description}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Deadline</f:facet>
+        #{project.deadline}
+    </h:column>
+</h:dataTable>
+
 </html>

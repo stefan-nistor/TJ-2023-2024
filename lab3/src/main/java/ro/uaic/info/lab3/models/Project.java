@@ -2,7 +2,12 @@ package ro.uaic.info.lab3.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.*;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -11,8 +16,9 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
+@RequiredArgsConstructor
+@Table(name = "projects", schema = "public")
 @AllArgsConstructor
-@NoArgsConstructor
 public class Project {
     @Id
     private UUID id;
