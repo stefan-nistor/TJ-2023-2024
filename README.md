@@ -15,3 +15,13 @@
     - Created entities for Project and Student, prepared ProjectService to fetch project from DB, created HelloWorld JSF
   - [ ] Homework
   - [ ] Bonus
+
+## LAB 4
+  - [x] Compulsory
+  - [ ] Homework
+  - [ ] Bonus
+
+## LAB 5
+  - [x] Compulsory
+  - [x] Homework
+  - [ ] Bonus
